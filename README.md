@@ -34,3 +34,12 @@ Open the printed URL (usually `http://localhost:5173`).
 
 - **`get_server_time`** (server-side): the backend executes it directly and streams the result back; the LLM continues in the same request.
 - **`ask_user`** (client-side): the LLM pauses the stream, React renders a form, and submitting it calls `addToolOutput` to resume the conversation.
+
+## Tests
+
+```bash
+cd backend-node
+npm test
+```
+
+Covers the security-critical logic: session isolation, JWT sign/verify, rate limiting, the model allowlist, and the chat controller's validation/error-mapping — mirroring the same units Directus's own AI module tests.
