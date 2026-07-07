@@ -1,0 +1,31 @@
+{
+  "name": "chat-assistant-kit-backend",
+  "description": "Backend for chat-assistant-kit: Express + Vercel AI SDK, with JWT auth, session isolation, and human-in-the-loop tool approval.",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@ai-sdk/devtools": "^1.0.2",
+    "@ai-sdk/openai": "^4.0.8",
+    "@langfuse/otel": "^5.9.1",
+    "@opentelemetry/sdk-trace-node": "^2.9.0",
+    "ai": "^7.0.15",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "jose": "^6.2.3",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^24.13.2",
+    "tsx": "^4.19.2",
+    "typescript": "~5.7.2"
+  }
+}
